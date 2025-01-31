@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    x:Class="RandoPro.Views.DetailsPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converters="clr-namespace:RandoPro.Converters"
+    Title="VAR-Haute">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ColorHexStringToMAUIColorConverter x:Key="ColorHexStringToMAUIColorConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout Margin="0">
+        <Label Text="{Binding  Name}" 
+                   HorizontalOptions="Center" 
+                   Style="{DynamicResource TitleStyle}" />
+        <Image Source="{Binding  Image}" 
+                   HeightRequest="240" 
+                   WidthRequest="300"
+                   HorizontalOptions="Center" />
+        <Button WidthRequest="150"
+                   Text="Photos" 
+                   Command="{Binding TapCommand}" 
+                   CommandParameter="{Binding Photos}"
+                   BackgroundColor="{StaticResource Primary}"
+                   TextColor="White" />
+        <Label Text="Niveau"
+                   CharacterSpacing="3"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,-10"/>
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Label Text="1"
+                       TextColor="#66b32f"
+                       FontAttributes="Bold"
+                       Margin="0,0,10,0"
+                       HorizontalOptions="Center"/>
+            <Label Text="2"
+                       TextColor="#f2a82f"
+                       FontAttributes="Bold"
+                       Margin="0,0,10,0"
+                       HorizontalOptions="Center"/>
+            <Label Text="3" 
+                       TextColor="#ff0000"
+                       FontAttributes="Bold"
+                       Margin="0,0,10,0"
+                       HorizontalOptions="Center"/>
+            <Label Text="4"
+                       TextColor="#660000"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"/>
+        </HorizontalStackLayout>
+        <Image Source = "hiking.png"
+                    BackgroundColor = "{Binding NiveauColor, Converter={StaticResource ColorHexStringToMAUIColorConverter}}"
+                    HeightRequest = "30"
+                    HorizontalOptions = "Center"
+                    WidthRequest = "70" />
+        <Label Text="{Binding Distance, StringFormat='Distance: {0}km'}" 
+                   Style="{DynamicResource BodyStyle}"
+                   HorizontalOptions="Center"/>
+        <Label Text="{Binding Denivele,  StringFormat='Dénivelé: {0}m' }" 
+                   Style="{DynamicResource BodyStyle}" 
+                   HorizontalOptions="Center"/>
+        <Button         WidthRequest="150"
+                            Text="Map" 
+                            Command="{Binding TapCommand}" 
+                            CommandParameter="{Binding Map}"
+                            BackgroundColor="{StaticResource Primary}"
+                            TextColor="White" />
+
+    </StackLayout>
+
+</ContentPage>

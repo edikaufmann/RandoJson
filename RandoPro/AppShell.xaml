@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell x:Class="RandoPro.AppShell"
+       xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:controls="clr-namespace:RandoPro.Controls"
+       xmlns:views="clr-namespace:RandoPro.Views"       
+       x:Name="shell"
+       FlyoutBackgroundImage="background.jpg"
+       FlyoutBackgroundImageAspect="AspectFill">
+    <!--
+        FlyoutBackgroundImage="background.jpg"
+        FlyoutBackgroundImageAspect="AspectFill"
+        FlyoutHeaderBehavior="CollapseOnScroll"
+        FlyoutBackgroundColor="SeaGreen">
+    -->
+    <Shell.Resources>
+        <Style x:Key="BaseStyle" TargetType="Element">
+            <Setter Property="Shell.BackgroundColor" Value="#455A64" />
+            <Setter Property="Shell.ForegroundColor" Value="White" />
+            <Setter Property="Shell.TitleColor" Value="White" />
+            <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
+            <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
+        </Style>
+        <Style BasedOn="{StaticResource BaseStyle}" TargetType="ShellItem" />
+        <Style x:Key="DomesticShell"
+               BasedOn="{StaticResource BaseStyle}"
+               TargetType="Element">
+            <Setter Property="Shell.BackgroundColor" Value="#039BE6" />
+        </Style>
+        <!--  FlyoutItem edi  -->
+
+        <Style Class="FlyoutItemLabelStyle" TargetType="Label">
+            <Setter Property="TextColor" Value="yellow" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="FontAttributes" Value="Bold" />
+        </Style>
+
+        <Style Class="FlyoutItemImageStyle" TargetType="Image">
+            <Setter Property="Aspect" Value="AspectFill" />
+        </Style>
+
+        <!--<Style ApplyToDerivedTypes="True"
+               Class="FlyoutItemLayoutStyle"
+               TargetType="Layout">
+            <Setter Property="BackgroundColor" Value="SeaGreen" />
+        </Style>-->
+        <!--  end FlyoutItem edi  -->
+        <Style x:Key="AlpesdeHauteProvenceShell"
+               BasedOn="{StaticResource BaseStyle}"
+               TargetType="Element">
+            <Setter Property="Shell.BackgroundColor" Value="#546DFE" />
+            <Setter Property="Shell.TitleColor" Value="Black" />
+        </Style>
+        <Style x:Key="GorgesduVerdonsShell"
+               BasedOn="{StaticResource BaseStyle}"
+               TargetType="Element">
+            <Setter Property="Shell.BackgroundColor" Value="#546DFE" />
+        </Style>
+        <Style x:Key="VARHauteShell"
+               BasedOn="{StaticResource BaseStyle}"
+               TargetType="Element">
+            <Setter Property="Shell.BackgroundColor" Value="#546DFE" />
+        </Style>
+        <Style x:Key="VARShell"
+               BasedOn="{StaticResource BaseStyle}"
+               TargetType="Element">
+            <Setter Property="Shell.BackgroundColor" Value="#546DFE" />
+        </Style>
+        <Style x:Key="VARCotiereShell"
+               BasedOn="{StaticResource BaseStyle}"
+               TargetType="Element">
+            <Setter Property="Shell.BackgroundColor" Value="#546DFE" />
+        </Style>
+        <Style x:Key="BoucheduRhoneShell"
+               BasedOn="{StaticResource BaseStyle}"
+               TargetType="Element">
+            <Setter Property="Shell.BackgroundColor" Value="#546DFE" />
+        </Style>
+        <Style x:Key="CalanquesShell"
+               BasedOn="{StaticResource BaseStyle}"
+               TargetType="Element">
+            <Setter Property="Shell.BackgroundColor" Value="#546DFE" />
+        </Style>
+        <Style x:Key="MeounesShell"
+               BasedOn="{StaticResource BaseStyle}"
+               TargetType="Element">
+            <Setter Property="Shell.BackgroundColor" Value="#546DFE" />
+        </Style>
+        <Style x:Key="SiouBlancShell"
+               BasedOn="{StaticResource BaseStyle}"
+               TargetType="Element">
+            <Setter Property="Shell.BackgroundColor" Value="#546DFE" />
+        </Style>
+
+        <Style x:Key="MotivationShell"
+               BasedOn="{StaticResource BaseStyle}"
+               TargetType="Element">
+            <Setter Property="Shell.BackgroundColor" Value="#96d1ff" />
+        </Style>
+    </Shell.Resources>
+
+    <!--  Template each FlyoutItem  -->
+    <Shell.ItemTemplate>
+        <DataTemplate>
+            <Grid ColumnDefinitions="0.2*,0.8*">
+                <Image Grid.Column="0"
+                       Margin="5"
+                       HeightRequest="30"
+                       Source="{Binding Icon}" />
+                <Label Grid.Column="1"
+                       FontAttributes="Bold"
+                       FontSize="20"
+                       Text="{Binding Title}"
+                       TextColor="Yellow"
+                       VerticalTextAlignment="Center" />
+            </Grid>
+        </DataTemplate>
+    </Shell.ItemTemplate>
+
+    <!--  Template each MenuItem  -->
+    <Shell.MenuItemTemplate>
+        <DataTemplate>
+            <Grid ColumnDefinitions="0.2*,0.8*">
+                <Image Margin="5"
+                       HeightRequest="30"
+                       Source="{Binding Icon}" />
+                <Label Grid.Column="1"
+                       FontSize="16"
+                       Text="{Binding Text}"
+                       TextColor="Yellow"
+                       VerticalTextAlignment="Center" />
+            </Grid>
+        </DataTemplate>
+    </Shell.MenuItemTemplate>
+
+    <Shell.FlyoutHeader>
+        <controls:FlyoutHeader />
+    </Shell.FlyoutHeader>
+
+    <Shell.FlyoutFooter>
+        <controls:FlyoutFooter />
+    </Shell.FlyoutFooter>
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems" Route="randos">
+        <!--<ShellContent Title="Méounes"
+                      ContentTemplate="{DataTemplate views:MeounesPage}"
+                      Icon="yhiker.png"
+                      Route="meounes"
+                      Style="{StaticResource MeounesShell}" />-->
+        <Tab Title="VAR" Icon="yhiker.png">
+            <!--<ShellContent Title="VAR"
+                          ContentTemplate="{DataTemplate views:VARPage}"
+                          Route="var"
+                          Style="{StaticResource DomesticShell}" />
+            <ShellContent Title="Cotière"
+                          ContentTemplate="{DataTemplate views:VARcotierePage}"
+                          Route="varcotiere"
+                          Style="{StaticResource DomesticShell}" />-->
+            <ShellContent Title="Haute"
+                          ContentTemplate="{DataTemplate views:MainPage}"
+                          Route="details"
+                          Style="{StaticResource DomesticShell}" />
+            <!--<ShellContent Title="Siou Blanc"
+                          ContentTemplate="{DataTemplate views:SiouBlancPage}"
+                          Route="sioublanc"
+                          Style="{StaticResource SiouBlancShell}" /> -->
+        </Tab>
+        <!--<Tab Title="Bouche du Rhône" Icon="yhiker.png">
+            <ShellContent Title="Bouche du Rhône"
+                          ContentTemplate="{DataTemplate views:BoucheduRhonePage}"
+                          Route="bouchedurhone"
+                          Style="{StaticResource BoucheduRhoneShell}" />
+            <ShellContent Title="Calanques"
+                          ContentTemplate="{DataTemplate views:CalanquesPage}"
+                          Route="calanques"
+                          Style="{StaticResource CalanquesShell}" />
+        </Tab> -->
+        <Tab Title="Alpes de Haute Provence" Icon="yhiker.png">
+            <!--<ShellContent Title="Alpes de Haute Provence"
+                          ContentTemplate="{DataTemplate views:MainPage}"
+                          Route="details"
+                          Style="{StaticResource AlpesdeHauteProvenceShell}" />-->
+            <!--<ShellContent Title="Gorges du Verdon"
+                          ContentTemplate="{DataTemplate views:GorgesduVerdonPage}"
+                          Route="gorgesduverdon"
+                          Style="{StaticResource GorgesduVerdonsShell}" /> -->
+        </Tab>
+    </FlyoutItem>
+    <!--  placeholder - get some distance  -->
+
+    <MenuItem Command="{Binding SiteCommand}"
+              CommandParameter="https://www.google.com/maps/d/u/0/embed?mid=1s269hmWDASbJV3wa6b6kAF1IXWKENBU"
+              IconImageSource="yhiking.png"
+              Text="toutes randonnées" />
+    <MenuItem Command="{Binding SiteCommand}"
+              CommandParameter="http://randopro.org"
+              IconImageSource="yhiking.png"
+              Text="WebSite" />
+    <!--  placeholder - get some distance  -->
+
+    <MenuItem Command="{Binding SiteCommand}"
+              CommandParameter="MotivationPage"
+              IconImageSource="yinfo.png"
+              Text="motivation" />
+
+    <ShellContent
+    Title="Randos"
+    ContentTemplate="{DataTemplate views:MainPage}"
+    Route="MainPage" />
+   
+</Shell>

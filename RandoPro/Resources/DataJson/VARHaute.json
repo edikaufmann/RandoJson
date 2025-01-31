@@ -1,0 +1,38 @@
+[
+ {
+  "Area": "VAR-Haute",
+  "Name": "Les Carmes, Barjols",
+  "Distance": 11,
+  "denivele": 440,
+  "Niveau": 2.2,
+  "Color": "#F2A82f",
+  "lat": 43.55629,
+  "lon": 6.02029,
+  "Sentier": "https://www.google.com/maps/d/embed?mid=1CsYzNT6tFFGW8udupTpm1gsTgvMxpyaf",
+  "Photos": "https://1drv.ms/f/s!ArU8i3XWMaR-kq9wuADewszjlRm6ng?e=q5rGrT",
+  "Programme": "https://1drv.ms/b/s!ArU8i3XWMaR-k68Rly_yFAPUPZIstA?e=AkzSyR",
+  "Details": "txt",
+  "Image": "https://www.allerlei.org/Data/image/*.jpg",
+  "Profil": "https://www.allerlei.org/Data/profil/*.png",
+  "spare": "spare",
+  "gpxTrack": "https://www.allerlei.org/Data/gpxTrack/*.zip"
+ },
+ {
+  "Area": "VAR-Haute",
+  "Name": "St. Martin de Pallières",
+  "Distance": 10.1,
+  "denivele": 280,
+  "Niveau": 1.71,
+  "Color": "#F2A82f",
+  "lat": 43.58464,
+  "lon": 5.87149,
+  "Sentier": "https://www.google.com/maps/d/embed?mid=1qr0QSJCK-HuOJ1pgxg2QRQ_X9OdqM1C- ",
+  "Photos": "https://1drv.ms/f/s!ArU8i3XWMaR-kq9xemwyF3a7JtUjew?e=aNd3Pc",
+  "Programme": "https://1drv.ms/b/s!ArU8i3XWMaR-k68Rly_yFAPUPZIstA?e=AkzSyR",
+  "Details": "txt",
+  "Image": "https://www.allerlei.org/Data/image/*.jpg",
+  "Profil": "https://www.allerlei.org/Data/profil/*.png",
+  "spare": "spare",
+  "gpxTrack": "https://www.allerlei.org/Data/gpxTrack/*.zip"
+ }
+]
