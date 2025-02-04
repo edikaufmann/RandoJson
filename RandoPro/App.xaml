@@ -20,7 +20,7 @@
                 <Setter Property="ColumnSpacing"
                         Value="6" />
             </Style>
-            <DataTemplate x:Key="RandoTemplate">
+            <!--<DataTemplate x:Key="RandoTemplate">
                 <Grid Padding="10"
                       RowDefinitions="Auto,Auto"
                       ColumnDefinitions="Auto,Auto">
@@ -38,19 +38,21 @@
                            FontSize="12" />
                 </Grid>
             </DataTemplate>
-           
+            
             <DataTemplate x:Key="RandoSearchTemplate">
                 <Grid Padding="10"
-                      ColumnDefinitions="0.15*,0.85*">
+          ColumnDefinitions="0.15*,0.85*">
                     <Image Source="{Binding Image}"
-                           HeightRequest="40"
-                           WidthRequest="40" />
+               HeightRequest="40"
+               WidthRequest="40" />
                     <Label Grid.Column="1"
-                           Text="{Binding Name}"
-                           FontAttributes="Bold"
-                           VerticalOptions="Center" />
+               Text="{Binding Name}"
+               FontAttributes="Bold"
+               VerticalOptions="Center" />
                 </Grid>
-            </DataTemplate>
+            </DataTemplate>-->
+
+
 
         </ResourceDictionary>
     </Application.Resources>

@@ -10,10 +10,11 @@ products:
 urlFragment: fundamentals-shell
 ---
 
-Randoff
+RandoJson
 - Using the Shell sample to learn .net Maui.
-- The Randoff sample shows some hikes I made in the Provence, France. 
--All hikes see: 'rando.gustatio.org'
+- The RandoJson shows 2 (test) hikes I made in the Provence, France.
+- The idea is - contrary to RandoGIT .cs - to use .json files for Data.  
+
 
 # Shell
 
