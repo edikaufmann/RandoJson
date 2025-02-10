@@ -9,63 +9,41 @@
     ios:Page.UseSafeArea="True"
     Title="Randos"
     x:DataType="viewmodel:RandosViewModel">
+
     <Grid
         ColumnDefinitions="*,*"
         ColumnSpacing="5"
         RowDefinitions="*,Auto"
         RowSpacing="0"
-        BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}">
+        BackgroundColor="{AppThemeBinding Light={DynamicResource LightBackground}, Dark={DynamicResource DarkBackground}}">
         <RefreshView
            Grid.ColumnSpan="3"
             Command="{Binding GetRandosCommand}"
-            IsRefreshing="{Binding IsRefreshing}" 
-           >
-            <!--
-            Grid.ColumnSpan="3"
-            Command="{Binding GetRandosCommand}"
-            IsRefreshing="{Binding IsRefreshing}"
-            -->
+            IsRefreshing="{Binding IsRefreshing}">
             <CollectionView
                 ItemsSource="{Binding Randos}"
                 BackgroundColor="Transparent"
-                SelectionMode="None"
-                >
-                <!--
-                ItemsSource="{Binding Randos}"
-                BackgroundColor="Transparent"
-                SelectionMode="None"
-                -->
-                <!--<CollectionView.EmptyView>
-                    <StackLayout Padding="100">
-                        <Image
-                            HorizontalOptions="CenterAndExpand"
-                            Source="nodata.png"
-                            VerticalOptions="CenterAndExpand" />
-                    </StackLayout>
-                </CollectionView.EmptyView>
-                <CollectionView.ItemsLayout>
-                    <GridItemsLayout  Orientation="Horizontal" Span="3"/>
-                </CollectionView.ItemsLayout>-->
+                SelectionMode="None">
+
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="model:Rando">
                         <Grid Padding="10">
                             <Frame HeightRequest="125" Style="{StaticResource CardView}">
                                 <Frame.GestureRecognizers>
                                     <TapGestureRecognizer 
-                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:RandosViewModel}}, Path=GoToDetailsCommand}"
-                                        CommandParameter="{Binding .}"/>
+                                            Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:RandosViewModel}}, Path=GoToDetailsCommand}"
+                                            CommandParameter="{Binding .}"/>
                                 </Frame.GestureRecognizers>
                                 <Grid Padding="0" ColumnDefinitions="125,*">
-                                    <Image
-                                        Aspect="AspectFill"
-                                        HeightRequest="125"
-                                        Source="{Binding Image}"
-                                        WidthRequest="125" />
+                                    <Image  Aspect="AspectFill"
+                                            HeightRequest="125"
+                                            Source="{Binding Image}"
+                                            WidthRequest="125" />
                                     <VerticalStackLayout
-                                        Grid.Column="1"
-                                        Padding="10">
+                                            Grid.Column="1"
+                                            Padding="10">
                                         <Label Style="{StaticResource LargeLabel}" Text="{Binding Name}" />
-                                        <Label Style="{StaticResource MediumLabel}" Text="{Binding Area}" />
+                                        <Label  Text="{Binding Distance, StringFormat='{0} km'}" FontSize="12" />
                                     </VerticalStackLayout>
                                 </Grid>
                             </Frame>
@@ -80,27 +58,19 @@
             Grid.Column="0"
             Margin="8"
             Command="{Binding GetRandosCommand}"
-            IsEnabled="{Binding IsNotBusy}"
-            Style="{StaticResource ButtonOutline}"
+            IsEnabled="{Binding IsNotBusy}"            
+            
             Text="Get Randos" />
-       
-        <!--  Add this  -->
         <Button
             Grid.Row="1"
             Grid.Column="1"
             Margin="8"
             Command="{Binding GetClosestRandoCommand}"
             IsEnabled="{Binding IsNotBusy}"
-            Style="{StaticResource ButtonOutline}"
+            
             Text="Find Closest" />
 
 
-        <ActivityIndicator
-            Grid.RowSpan="2"
-            Grid.ColumnSpan="2"
-            HorizontalOptions="FillAndExpand"
-            IsRunning="{Binding IsBusy}"
-            IsVisible="{Binding IsBusy}"
-            VerticalOptions="CenterAndExpand" />
+        
     </Grid>
 </ContentPage>

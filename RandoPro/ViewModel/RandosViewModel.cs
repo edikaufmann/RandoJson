@@ -1,6 +1,4 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
-using RandoPro.Services;
+﻿using RandoPro.Services;
 using RandoPro.Views;
 
 namespace RandoPro.ViewModel;

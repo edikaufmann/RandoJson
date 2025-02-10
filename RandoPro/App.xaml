@@ -10,6 +10,18 @@
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
 
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="{DynamicResource Primary}" />
+                <Setter Property="Shell.ForegroundColor" Value="{OnPlatform WinUI={DynamicResource Primary}, Default=White}" />
+                <Setter Property="Shell.TitleColor" Value="White" />
+                <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
+                <Setter Property="Shell.UnselectedColor" Value="{AppThemeBinding Dark=#95FFFFFF, Light=#95000000}" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{AppThemeBinding Dark={DynamicResource DarkBackground}, Light={DynamicResource LightBackground}}" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="{AppThemeBinding Dark={DynamicResource LightBackground}, Light={DynamicResource DarkBackground}}" />
+                <Setter Property="Shell.TabBarUnselectedColor" Value="{AppThemeBinding Dark=#95FFFFFF, Light=#95000000}" />
+                <Setter Property="Shell.TabBarTitleColor" Value="{AppThemeBinding Dark={DynamicResource LightBackground}, Light={DynamicResource DarkBackground}}" />
+            </Style>
+            <!-- <Style BasedOn="{DynamicResource BaseStyle}" TargetType="ShellItem" ApplyToDerivedTypes="True" /> -->
             <Style TargetType="StackLayout">
                 <Setter Property="Spacing"
                         Value="6" />
@@ -21,36 +33,36 @@
                         Value="6" />
             </Style>
             <!--<DataTemplate x:Key="RandoTemplate">
-                <Grid Padding="10"
-                      RowDefinitions="Auto,Auto"
-                      ColumnDefinitions="Auto,Auto">
-                    <Image Grid.RowSpan="2"
-                           Source="{Binding Image}"
-                           Aspect="AspectFill"
-                           HeightRequest="60"
-                           WidthRequest="60" />
-                    <Label Grid.Column="1"
-                           Text="{Binding Name}"
-                           FontAttributes="Bold" />
-                    <Label Grid.Row="1"
-                           Grid.Column="1"
-                           Text="{Binding Distance, StringFormat='{0} km'}"
-                           FontSize="12" />
-                </Grid>
-            </DataTemplate>
-            
-            <DataTemplate x:Key="RandoSearchTemplate">
-                <Grid Padding="10"
+    <Grid Padding="10"
+          RowDefinitions="Auto,Auto"
           ColumnDefinitions="0.15*,0.85*">
-                    <Image Source="{Binding Image}"
+        <Image Grid.RowSpan="2"
+               Source="{Binding Image}"
+               Aspect="AspectFill"
+               HeightRequest="60"
+               WidthRequest="60" />
+        <Label Grid.Column="1"
+               Text="{Binding Name}"
+               FontAttributes="Bold" />
+        <Label Grid.Row="1"
+               Grid.Column="1"
+               Text="{Binding Distance, StringFormat='{0} km'}"
+               FontSize="12" />
+    </Grid>
+</DataTemplate>
+Text="{Binding Distance, StringFormat='Distance: {0}km'}"
+<DataTemplate x:Key="RandoSearchTemplate">
+    <Grid Padding="10"
+          ColumnDefinitions="0.15*,0.85*">
+        <Image Source="{Binding Image}"
                HeightRequest="40"
                WidthRequest="40" />
-                    <Label Grid.Column="1"
-               Text="{Binding Name}"
+        <Label Grid.Column="1"
+               Text="{Binding Area}"
                FontAttributes="Bold"
                VerticalOptions="Center" />
-                </Grid>
-            </DataTemplate>-->
+    </Grid>
+</DataTemplate>-->
 
 
 

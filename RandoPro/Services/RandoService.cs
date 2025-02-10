@@ -1,6 +1,6 @@
-﻿using RandoPro.Models;
-using System.Net.Http.Json;
+﻿using System.Net.Http.Json;
 using System.Text.Json;
+
 
 namespace RandoPro.Services;
 
@@ -19,17 +19,17 @@ public class RandoService
             return randoList;
 
         // Online
-        //var response = await httpClient.GetAsync("https://randopro.org/MyUploads/Data/VARHaute.json");
-        //if (response.IsSuccessStatusCode)
-        //{
-        //    randoList = await response.Content.ReadFromJsonAsync<List<Rando>>();
-        //}
+        var response = await httpClient.GetAsync("https://randopro.org/MyUploads/Data/VARHaute.json");
+        if (response.IsSuccessStatusCode)
+        {
+            randoList = await response.Content.ReadFromJsonAsync<List<Rando>>();
+        }
 
-        // Offline
-        using var stream = await FileSystem.OpenAppPackageFileAsync("VARHaute.json");
-        using var reader = new StreamReader(stream);
-        var contents = await reader.ReadToEndAsync();
-        randoList = JsonSerializer.Deserialize<List<Rando>>(contents);
+        //// Offline
+        //using var stream = await FileSystem.OpenAppPackageFileAsync("VARHaute.json");
+        //using var reader = new StreamReader(stream);
+        //var contents = await reader.ReadToEndAsync();
+        //randoList = JsonSerializer.Deserialize<List<Rando>>(contents);
 
         return randoList;
     }
