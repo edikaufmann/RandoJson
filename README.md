@@ -13,7 +13,7 @@ urlFragment: fundamentals-shell
 RandoJson
 - Using the Shell sample to learn .net Maui.
 - The RandoJson shows 2 (test) hikes I made in the Provence, France.
-- The idea is - contrary to RandoGIT .cs - to use .json files for Data.  
+- The idea is - contrary to RandoCS - to use .json files for Data.  
 
 
 # Shell
