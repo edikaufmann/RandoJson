@@ -1,4 +1,5 @@
 ﻿using RandoPro.Services;
+using CommunityToolkit.Mvvm.ComponentModel;
 using RandoPro.Views;
 
 namespace RandoPro.ViewModel;
@@ -6,6 +7,8 @@ namespace RandoPro.ViewModel;
 public partial class RandosViewModel : BaseViewModel
 {
     public ObservableCollection<Rando> Randos { get; } = new();
+    //public bool IsRefreshing1 { get => isRefreshing; set => isRefreshing = value; }
+
     RandoService randoService;
     IConnectivity connectivity;
     IGeolocation geolocation;
@@ -16,12 +19,12 @@ public partial class RandosViewModel : BaseViewModel
         this.connectivity = connectivity;
         this.geolocation = geolocation;
     }
-    
+
     [RelayCommand]
     async Task GoToDetails(Rando rando)
     {
         if (rando == null)
-        return;
+            return;
 
         await Shell.Current.GoToAsync(nameof(DetailsPage), true, new Dictionary<string, object>
         {
