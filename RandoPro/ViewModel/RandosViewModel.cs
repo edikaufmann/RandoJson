@@ -39,7 +39,7 @@ public partial class RandosViewModel : BaseViewModel
     async Task GetRandosAsync()
     {
         if (IsBusy)
-            return;
+           return;
 
         try
         {

@@ -16,10 +16,10 @@
         RowDefinitions="*,Auto"
         RowSpacing="0"
         BackgroundColor="{AppThemeBinding Light={DynamicResource LightBackground}, Dark={DynamicResource DarkBackground}}">
-        <RefreshView
+        <!--<RefreshView
            Grid.ColumnSpan="3"
             Command="{Binding GetRandosCommand}"
-            IsRefreshing="{Binding IsRefreshing}">
+            IsRefreshing="{Binding IsRefreshing}">-->
             <CollectionView
                 ItemsSource="{Binding Randos}"
                 BackgroundColor="Transparent"
@@ -51,7 +51,7 @@
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-        </RefreshView>
+        <!--</RefreshView>-->
 
         <Button
             Grid.Row="1"

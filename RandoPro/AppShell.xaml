@@ -203,9 +203,9 @@
               IconImageSource="yinfo.png"
               Text="motivation" />
 
-    <ShellContent
-    Title="Randos"
-    ContentTemplate="{DataTemplate views:MainPage}"
-    Route="MainPage" />
-   
+
+    <!--<ShellContent
+ Title="Randos"
+ ContentTemplate="{DataTemplate views:MainPage}"
+ Route="MainPage" />-->
 </Shell>
