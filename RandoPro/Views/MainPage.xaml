@@ -26,14 +26,15 @@
                 SelectionMode="None">
 
                 <CollectionView.ItemTemplate>
-                    <DataTemplate x:DataType="model:Rando">
+                <DataTemplate x:DataType="model:Rando">
                         <Grid Padding="10">
-                            <!--<Frame HeightRequest="125" Style="{StaticResource CardView}">
-                                <Frame.GestureRecognizers>
+                        <!--<Frame HeightRequest="125" Style="{StaticResource CardView}">-->
+                        <!--<Frame HeightRequest="125" Style="{StaticResource CardView}">
+                            <Frame.GestureRecognizers>
                                     <TapGestureRecognizer 
                                             Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:RandosViewModel}}, Path=GoToDetailsCommand}"
                                             CommandParameter="{Binding .}"/>
-                                </Frame.GestureRecognizers>-->
+                            </Frame.GestureRecognizers>-->
                                 <Grid Padding="0" ColumnDefinitions="125,*">
                                     <Image  Aspect="AspectFill"
                                             HeightRequest="125"
@@ -42,8 +43,9 @@
                                     <VerticalStackLayout
                                             Grid.Column="1"
                                             Padding="10">
-                                        <Label Style="{StaticResource LargeLabel}" Text="{Binding Name}" />
-                                        <Label  Text="{Binding Distance, StringFormat='{0} km'}" FontSize="12" />
+                                <!--Style="{StaticResource LargeLabel}"-->
+                                <Label  Text="{Binding Name}" />
+                                <Label  Text="{Binding Distance, StringFormat='{0} km'}" FontSize="12" />
                                     </VerticalStackLayout>
                                 </Grid>
                             <!--</Frame>-->

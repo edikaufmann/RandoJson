@@ -21,7 +21,7 @@
                 <Setter Property="Shell.TabBarUnselectedColor" Value="{AppThemeBinding Dark=#95FFFFFF, Light=#95000000}" />
                 <Setter Property="Shell.TabBarTitleColor" Value="{AppThemeBinding Dark={DynamicResource LightBackground}, Light={DynamicResource DarkBackground}}" />
             </Style>
-            <!-- <Style BasedOn="{DynamicResource BaseStyle}" TargetType="ShellItem" ApplyToDerivedTypes="True" /> -->
+             <!--<Style BasedOn="{DynamicResource BaseStyle}" TargetType="ShellItem" ApplyToDerivedTypes="True" />--> 
             <Style TargetType="StackLayout">
                 <Setter Property="Spacing"
                         Value="6" />
@@ -32,14 +32,17 @@
                 <Setter Property="ColumnSpacing"
                         Value="6" />
             </Style>
-            <Style x:Key="CardView" TargetType="Frame">
+            <!--<Style x:Key="LargeLabel" BasedOn="{StaticResource BaseLabel}" TargetType="Label">
+                <Setter Property="FontSize" Value="20"/>
+            </Style>-->
+            <!--<Style x:Key="CardView" TargetType="Frame" >
                 <Setter Property="BorderColor" Value="#DDDDDD" />
                 <Setter Property="HasShadow" Value="True" />
                 <Setter Property="Padding" Value="0" />
                 <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource CardBackground}, Dark={StaticResource CardBackgroundDark}}" />
                 <Setter Property="CornerRadius" Value="10" />
                 <Setter Property="IsClippedToBounds" Value="True"/>
-            </Style>
+            </Style>-->
             <!--<DataTemplate x:Key="RandoTemplate">
     <Grid Padding="10"
           RowDefinitions="Auto,Auto"
