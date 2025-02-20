@@ -1,7 +1,4 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
-
-namespace RandoPro.ViewModel;
+﻿namespace RandoPro.ViewModel;
 
 [QueryProperty(nameof(Rando), "Rando")]
 public partial class RandoDetailsViewModel : BaseViewModel

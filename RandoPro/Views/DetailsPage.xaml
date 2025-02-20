@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage 
-    x:Class="RandoPro.Views.DetailsPage"
+    x:Class="RandoPro.DetailsPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodel="clr-namespace:RandoPro.ViewModel"
     xmlns:converters="clr-namespace:RandoPro.Converters"
     Title="VAR-Haute">
-    <ContentPage.Resources>
+    <!--<ContentPage.Resources>
         <ResourceDictionary>
             <converters:ColorHexStringToMAUIColorConverter x:Key="ColorHexStringToMAUIColorConverter" />
         </ResourceDictionary>
-    </ContentPage.Resources>
+    </ContentPage.Resources>-->
 
     <StackLayout Margin="0">
         <Label Text="{Binding  Name}" 
-                   HorizontalOptions="Center" 
-                   Style="{DynamicResource TitleStyle}" />
+                   HorizontalOptions="Center" />
+        <!--Style="{DynamicResource TitleStyle}"-->
         <Image Source="{Binding  Image}" 
                    HeightRequest="240" 
                    WidthRequest="300"
@@ -22,9 +23,9 @@
         <Button WidthRequest="150"
                    Text="Photos" 
                    Command="{Binding TapCommand}" 
-                   CommandParameter="{Binding Photos}"
-                   BackgroundColor="{StaticResource Primary}"
+                   CommandParameter="{Binding Photos}"                  
                    TextColor="White" />
+            <!--BackgroundColor="{StaticResource Primary}"-->
         <Label Text="Niveau"
                    CharacterSpacing="3"
                    HorizontalOptions="Center"
@@ -56,17 +57,17 @@
                     HorizontalOptions = "Center"
                     WidthRequest = "70" />
         <Label Text="{Binding Distance, StringFormat='Distance: {0}km'}" 
-                   Style="{DynamicResource BodyStyle}"
-                   HorizontalOptions="Center"/>
+                     HorizontalOptions="Center"/>
+        <!--Style="{DynamicResource BodyStyle}"-->
         <Label Text="{Binding Denivele,  StringFormat='Dénivelé: {0}m' }" 
-                   Style="{DynamicResource BodyStyle}" 
-                   HorizontalOptions="Center"/>
+                      HorizontalOptions="Center"/>
+        <!--Style="{DynamicResource BodyStyle}"-->
         <Button         WidthRequest="150"
                             Text="Map" 
                             Command="{Binding TapCommand}" 
                             CommandParameter="{Binding Map}"
-                            BackgroundColor="{StaticResource Primary}"
                             TextColor="White" />
+                             <!--BackgroundColor="{StaticResource Primary}"-->
 
     </StackLayout>
 

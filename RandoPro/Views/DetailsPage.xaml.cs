@@ -1,10 +1,9 @@
-namespace RandoPro.Views;
-
+namespace RandoPro;
 public partial class DetailsPage : ContentPage
 {
-	public DetailsPage(RandoDetailsViewModel viewModel)
-	{
-		InitializeComponent();
-		BindingContext = viewModel;
-	}
+    public DetailsPage(RandoDetailsViewModel viewModel)
+    {
+        InitializeComponent();
+        BindingContext = viewModel;
+    }    
 }
