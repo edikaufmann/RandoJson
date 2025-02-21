@@ -5,6 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:viewmodel="clr-namespace:RandoPro.ViewModel"
     xmlns:converters="clr-namespace:RandoPro.Converters"
+    x:DataType="viewmodel:RandoDetailsViewModel"
     Title="VAR-Haute">
     <!--<ContentPage.Resources>
         <ResourceDictionary>

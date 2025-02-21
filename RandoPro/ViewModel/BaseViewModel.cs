@@ -1,6 +1,4 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-
-namespace RandoPro.ViewModel;
+﻿namespace RandoPro.ViewModel;
 public partial class BaseViewModel : ObservableObject
 {
     [ObservableProperty]
@@ -12,17 +10,3 @@ public partial class BaseViewModel : ObservableObject
 
     public bool IsNotBusy => !IsBusy;
 }
-
-//namespace RandoPro.ViewModel;
-
-//public partial class BaseViewModel : ObservableObject
-//{
-//    [ObservableProperty]
-//    [NotifyPropertyChangedFor(nameof(IsNotBusy))]
-//    bool isBusy;
-
-//    [ObservableProperty]
-//    string title;
-
-//    public bool IsNotBusy => !IsBusy;
-//}

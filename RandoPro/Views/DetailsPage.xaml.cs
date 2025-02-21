@@ -1,3 +1,5 @@
+using RandoPro.Models;
+
 namespace RandoPro;
 public partial class DetailsPage : ContentPage
 {

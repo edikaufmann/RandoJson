@@ -1,6 +1,4 @@
 ﻿using RandoPro.Services;
-using CommunityToolkit.Mvvm.ComponentModel;
-using RandoPro.Views;
 
 namespace RandoPro.ViewModel;
 
