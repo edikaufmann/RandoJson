@@ -6,6 +6,7 @@
     xmlns:viewmodel="clr-namespace:RandoPro.ViewModel"
     xmlns:converters="clr-namespace:RandoPro.Converters"
     x:DataType="viewmodel:RandoDetailsViewModel"
+    xmlns:model="clr-namespace:RandoPro.Models"
     Title="VAR-Haute">
     <!--<ContentPage.Resources>
         <ResourceDictionary>

@@ -12,6 +12,7 @@ public partial class RandoDetailsViewModel : BaseViewModel
     [ObservableProperty]
     Rando rando;
 
+   
     [RelayCommand]
     async Task OpenMap()
     {
