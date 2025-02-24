@@ -24,9 +24,9 @@
                    HorizontalOptions="Center" />
         <Button WidthRequest="150"
                    Text="Photos" 
-                   Command="{Binding TapCommand}"
+                   Command="{Binding TapPhotosCommand}"
                    CommandParameter="{Binding Rando.Photos}"                  
-                   TextColor="White" />
+                   TextColor="Black" />
             <!--BackgroundColor="{StaticResource Primary}"
         Command="{Binding TapCommand}"-->
         <Label Text="Niveau"
@@ -65,13 +65,13 @@
         <Label Text="{Binding Rando.denivele,  StringFormat='Dénivelé: {0}m' }" 
                       HorizontalOptions="Center"/>
         <!--Style="{DynamicResource BodyStyle}"-->
-        <Button         WidthRequest="150"
-                            Text="Map" 
-                            Command="{Binding TapCommand}"
-                            CommandParameter="{Binding Rando.Map}"
-                            TextColor="White" />
-                             <!--BackgroundColor="{StaticResource Primary}"
-                                Command="{Binding TapCommand}"-->
+        <Button WidthRequest="150"
+                Text="Map" 
+                Command="{Binding TapMapCommand}"
+                CommandParameter="{Binding Rando.Map}"
+                TextColor="Black" />
+                <!--BackgroundColor="{StaticResource Primary}"
+                 Command="{Binding TapCommand}"-->
 
     </StackLayout>
 

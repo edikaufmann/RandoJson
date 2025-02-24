@@ -15,10 +15,14 @@ public partial class RandoDetailsViewModel : BaseViewModel, IQueryAttributable
     Rando rando;
 
     [RelayCommand]
-    void Tap(string photos)
-    { }
+    void TapPhotos(string Photos)
+    {}
 
         [RelayCommand]
+    void TapMap(string Map)
+    {}
+
+            [RelayCommand]
         async Task OpenMap()
         {
             try
