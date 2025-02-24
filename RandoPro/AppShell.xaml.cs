@@ -1,4 +1,5 @@
 ﻿using System.Windows.Input;
+using Microsoft.Win32;
 using RandoPro.Views;
 
 namespace RandoPro;
@@ -28,9 +29,10 @@ public partial class AppShell : Shell
     void RegisterRoutes()
     {
         Routes.Add("mainpage", typeof(Views.MainPage));
-        
-       
+        //Routing.RegisterRoute("DetailsPage", typeof(DetailsPage));
+        Routes.Add("DetailsPage", typeof(DetailsPage));
         Routes.Add("MotivationPage", typeof(Views.MotivationPage));
+             
 
         foreach (var item in Routes)
         {

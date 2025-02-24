@@ -22,12 +22,7 @@ public static class MauiProgram
         builder.Services.AddSingleton<RandoService>();
         builder.Services.AddSingleton<RandosViewModel>();
         builder.Services.AddSingleton<MainPage>();
-
-
-        //builder.Services.AddSingleton<App>();
-        //builder.Services.AddSingleton<AppShell>();
-
-
+		
         builder.Services.AddTransient<RandoDetailsViewModel>();
         builder.Services.AddTransient<DetailsPage>();
 

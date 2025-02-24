@@ -15,19 +15,20 @@
     </ContentPage.Resources>-->
 
     <StackLayout Margin="0">
-        <Label Text="{Binding  Name}" 
+        <Label Text="{Binding Rando.Name} "
                    HorizontalOptions="Center" />
         <!--Style="{DynamicResource TitleStyle}"-->
-        <Image Source="{Binding  Image}" 
+        <Image Source="{Binding Rando.Image}" 
                    HeightRequest="240" 
                    WidthRequest="300"
                    HorizontalOptions="Center" />
         <Button WidthRequest="150"
                    Text="Photos" 
-                   Command="{Binding TapCommand}" 
-                   CommandParameter="{Binding Photos}"                  
+                   Command="{Binding TapCommand}"
+                   CommandParameter="{Binding Rando.Photos}"                  
                    TextColor="White" />
-            <!--BackgroundColor="{StaticResource Primary}"-->
+            <!--BackgroundColor="{StaticResource Primary}"
+        Command="{Binding TapCommand}"-->
         <Label Text="Niveau"
                    CharacterSpacing="3"
                    HorizontalOptions="Center"
@@ -54,22 +55,23 @@
                        HorizontalOptions="Center"/>
         </HorizontalStackLayout>
         <Image Source = "hiking.png"
-                    BackgroundColor = "{Binding NiveauColor, Converter={StaticResource ColorHexStringToMAUIColorConverter}}"
+                    BackgroundColor = "{Binding Rando.Color, Converter={StaticResource ColorHexStringToMAUIColorConverter}}"
                     HeightRequest = "30"
                     HorizontalOptions = "Center"
                     WidthRequest = "70" />
-        <Label Text="{Binding Distance, StringFormat='Distance: {0}km'}" 
+        <Label Text="{Binding Rando.Distance, StringFormat='Distance: {0}km'}" 
                      HorizontalOptions="Center"/>
         <!--Style="{DynamicResource BodyStyle}"-->
-        <Label Text="{Binding Denivele,  StringFormat='Dénivelé: {0}m' }" 
+        <Label Text="{Binding Rando.denivele,  StringFormat='Dénivelé: {0}m' }" 
                       HorizontalOptions="Center"/>
         <!--Style="{DynamicResource BodyStyle}"-->
         <Button         WidthRequest="150"
                             Text="Map" 
-                            Command="{Binding TapCommand}" 
-                            CommandParameter="{Binding Map}"
+                            Command="{Binding TapCommand}"
+                            CommandParameter="{Binding Rando.Map}"
                             TextColor="White" />
-                             <!--BackgroundColor="{StaticResource Primary}"-->
+                             <!--BackgroundColor="{StaticResource Primary}"
+                                Command="{Binding TapCommand}"-->
 
     </StackLayout>
 
