@@ -24,7 +24,7 @@
                    HorizontalOptions="Center" />
         <Button WidthRequest="150"
                    Text="Photos" 
-                   Command="{Binding TapPhotosCommand}"
+                   Command="{Binding TapCommand}"
                    CommandParameter="{Binding Rando.Photos}"                  
                    TextColor="Black" />
             <!--BackgroundColor="{StaticResource Primary}"
@@ -67,7 +67,7 @@
         <!--Style="{DynamicResource BodyStyle}"-->
         <Button WidthRequest="150"
                 Text="Map" 
-                Command="{Binding TapMapCommand}"
+                Command="{Binding TapCommand}"
                 CommandParameter="{Binding Rando.Map}"
                 TextColor="Black" />
                 <!--BackgroundColor="{StaticResource Primary}"

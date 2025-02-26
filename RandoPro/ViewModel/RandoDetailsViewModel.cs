@@ -1,4 +1,6 @@
-﻿namespace RandoPro.ViewModel;
+﻿using System.Windows.Input;
+
+namespace RandoPro.ViewModel;
 
 [QueryProperty(nameof(Rando), "Rando")]
 public partial class RandoDetailsViewModel : BaseViewModel, IQueryAttributable
@@ -9,22 +11,14 @@ public partial class RandoDetailsViewModel : BaseViewModel, IQueryAttributable
         this.map = map;
     }
 
-    //public ICommand TapCommand => new Command<string>(async (url) => await Launcher.OpenAsync(url)); //edi
+    public ICommand TapCommand => new Command<string>(async (url) => await Launcher.OpenAsync(url)); //edi
 
     [ObservableProperty]
     Rando rando;
 
     [RelayCommand]
-    void TapPhotos(string Photos)
-    {}
-
-        [RelayCommand]
-    void TapMap(string Map)
-    {}
-
-            [RelayCommand]
-        async Task OpenMap()
-        {
+    async Task OpenMap()
+    {
             try
             {
                 await map.OpenAsync(Rando.lat, Rando.lon, new MapLaunchOptions
