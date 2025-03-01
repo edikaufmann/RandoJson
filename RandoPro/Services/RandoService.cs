@@ -19,7 +19,7 @@ public class RandoService
             return randoList;
 
         // Online
-        var response = await httpClient.GetAsync("https://randopro.org/MyUploads/Data/VARHaute.json");
+        var response = await httpClient.GetAsync("https://randopro.org/MyUploads/Data/AlpesdeHauteProvence.json");
         if (response.IsSuccessStatusCode)
         {
             randoList = await response.Content.ReadFromJsonAsync<List<Rando>>();

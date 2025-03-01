@@ -7,7 +7,7 @@
     xmlns:converters="clr-namespace:RandoPro.Converters"
     x:DataType="viewmodel:RandoDetailsViewModel"
     xmlns:model="clr-namespace:RandoPro.Models"
-    Title="VAR-Haute">
+    Title="{Binding Rando.Area}">
     <!--<ContentPage.Resources>
         <ResourceDictionary>
             <converters:ColorHexStringToMAUIColorConverter x:Key="ColorHexStringToMAUIColorConverter" />
