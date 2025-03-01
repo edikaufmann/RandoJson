@@ -34,7 +34,8 @@
 	<AotAssemblies>False</AotAssemblies>-->
 	<PropertyGroup>
 		<RunAOTCompilation>False</RunAOTCompilation>		
-		<EnableAOTCompilation>False</EnableAOTCompilation>		
+		<EnableAOTCompilation>False</EnableAOTCompilation>
+		<AotAssemblies>False</AotAssemblies>
 	</PropertyGroup>
 	
 	<!--
@@ -159,13 +160,13 @@
 	
 	<ItemGroup>
 	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
-	  <PackageReference Include="Microsoft.Maui.Controls.Maps" Version="9.0.30" />
-	  <PackageReference Include="Microsoft.Maui.Maps" Version="9.0.30" />
-	  <PackageReference Include="System.Net.Http.Json" Version="9.0.1" />
+	  <PackageReference Include="Microsoft.Maui.Controls.Maps" Version="9.0.40" />
+	  <PackageReference Include="Microsoft.Maui.Maps" Version="9.0.40" />
+	  <PackageReference Include="System.Net.Http.Json" Version="9.0.2" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Update="Microsoft.Maui.Controls" Version="9.0.21" />
+	  <PackageReference Update="Microsoft.Maui.Controls" Version="9.0.40" />
 	</ItemGroup>
 
 	<ItemGroup>
